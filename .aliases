@@ -1,0 +1,8 @@
+# Tmux
+alias tl='tmux ls'
+alias ta='tmux attach -t'
+alias tk='tmux kill-session -t'
+alias tn='tmux new -s'
+
+# Directories
+alias personal='cd ~/Projects/personal'
