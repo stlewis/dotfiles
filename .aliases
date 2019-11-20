@@ -2,7 +2,23 @@
 alias tl='tmux ls'
 alias ta='tmux attach -t'
 alias tk='tmux kill-session -t'
-alias tn='tmux new -s'
+alias tn='tmux -2 new -s'
+alias mux='tmuxinator'
+alias ssh='TERM=xterm-256color ssh'
 
-# Directories
-alias personal='cd ~/Projects/personal'
+alias confix='$EDITOR `git diff --name-only | uniq`'
+alias conres='git add . --all && git rebase --continue'
+
+# Journaling
+alias journal="jrnl < ~/Dropbox/.journal-template.md && jrnl -1 --edit"
+alias read_journal="jrnl --export md | pandoc -t html | browser"
+alias read_last_entry="jrnl -1 --export md | pandoc -t html | browser"
+
+alias ssh='TERM=xterm-256color ssh'
+
+
+# Markdown viewing
+alias markoff="open -a Markoff "
+
+# Fake vim for now
+alias vim='nvim'
