@@ -1,0 +1,10 @@
+#! /usr/bin/env ruby
+
+remote = `git remote get-url --push origin`.chomp
+remote_name = remote.split(':').last.gsub(".git","")
+
+branch = `git rev-parse --abbrev-ref HEAD`.chomp
+
+pull_url = "https://github.com/#{remote_name}/pull/new/#{branch}"
+
+system("open #{pull_url}")
