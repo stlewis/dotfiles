@@ -10,15 +10,13 @@ alias confix='$EDITOR `git diff --name-only | uniq`'
 alias conres='git add . --all && git rebase --continue'
 
 # Journaling
-alias journal="jrnl < ~/Dropbox/.journal-template.md && jrnl -1 --edit"
-alias read_journal="jrnl --export md | pandoc -t html | browser"
-alias read_last_entry="jrnl -1 --export md | pandoc -t html | browser"
+alias wmj="jrnl < ~/Google\ Drive\/My\ Drive/.journal-template.md && jrnl -1 --edit"
+alias rmj="jrnl --export md | pandoc -t html | browser"
 
 alias ssh='TERM=xterm-256color ssh'
 
-
-# Markdown viewing
-alias markoff="open -a Markoff "
-
 # Fake vim for now
 alias vim='nvim'
+
+# Mouse speed hack
+alias mousespeed="defaults write -g com.apple.mouse.scaling -float"

@@ -1,0 +1,10 @@
+font-family = "SauceCodePro"
+font-size = 18
+theme = catppuccin-mocha 
+window-inherit-working-directory = false
+macos-titlebar-proxy-icon = hidden
+
+# keybinds
+keybind = global:f5=toggle_quick_terminal
+
+
