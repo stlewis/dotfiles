@@ -1,8 +1,17 @@
-Just my personal dotfiles. Most of these are self-explanatory and can just be put in the appropriate place. However, the terminfo files bear some explanation. Basically, these files define new custom terminal types that are configured to properly display italic text, which is especially important to me if I'm using a program like vim to write with. In any event, to use a custom terminal type, the first step is to register the new type via command similar to this:
+Just my personal dotfiles. These are mostly geared towards a macOS setup, but they should be mostly interchangeable with any \*nix system as well.
 
-`tic -x /tmp/tmux-256color.terminfo`
+### `tmux.conf`
 
-The command above presumes that the `tmux-256color.terminfo` file included in this repo is located in the `/tmp` directory, of course.
+This file should be placed in, (or symlinked to), `~/.config/tmux/tmux.conf`. It leverages ['tpm']('https://github.com/tmux-plugins/tpm'), so installing that is a pre-requisite.
 
-Finally, both the terminal emulator you're using and your tmux configuration have to be modified to use the new terminal type. For my purposes, the `tmux.conf` file included in this repo takes care of that concern. The mechanism for updating your terminal type will depend upon the terminal emulator you're using.
+#### `aliases`
 
+This file should be placed, (or symlinked) to `~/.aliases`. It contains a handful of aliases that help with tmux sessions, dealing with git conflicts and working with the `jrnl` program among other random things.
+
+#### `ghostty`
+
+This entire directory should be symlinked into `~/.config/`. It handles configuration options for the [Ghostty Terminal]('https://ghostty.org'), which is my current daily-driver.
+
+#### `zshrc`
+
+This file should be symlinked to `~/.zshrc`. It contains my ZSH configuration which is centered around [OhMyZSH]('https://ohmyz.sh') and its various plugins along with a few environment setups for RBENV and similar.
