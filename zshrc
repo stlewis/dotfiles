@@ -21,4 +21,5 @@ source ~/.aliases
 eval "$(rbenv init - zsh)"
 export PATH="/usr/local/opt/libpq/bin:/Users/stevelewis/bin:$PATH"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 eomotd
